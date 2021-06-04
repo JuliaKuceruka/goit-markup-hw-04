@@ -134,7 +134,7 @@ body {
 }
 
 .contact-icon {
-  fill: var(--main-text-color);
+  fill: currentColor;
   margin-right: 10px;
   text-align: center;
 }
@@ -181,7 +181,7 @@ body {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/background.svg");
+    url("../images/backgound.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--footer-bacground-color);
@@ -386,7 +386,7 @@ body {
 }
 
 .company-logo {
-  fill: var(--icon-fill-color);
+  fill: currentColor;
   width: 106px;
   height: 60px;
 }
