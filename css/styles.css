@@ -9,6 +9,7 @@
   --button-background-color: #f5f4fa;
   --footer-bacground-color: #2f303a;
   --border-color: #eeeeee;
+  --icon-fill-color: #afb1b8;
 }
 
 h1,
@@ -82,10 +83,12 @@ body {
 
 .contact-list {
   display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
-.contact-list-item:not(:first-child) {
-  margin-left: 48px;
+.contact-list-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav-list-item:not(:last-child) {
@@ -121,6 +124,8 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--main-text-color);
+  display: flex;
+  align-items: center;
 }
 
 .header-contact-link:hover,
@@ -128,7 +133,7 @@ body {
   color: var(--accent-color);
 }
 
-.icon {
+.contact-icon {
   fill: var(--main-text-color);
   margin-right: 10px;
   text-align: center;
@@ -194,29 +199,35 @@ body {
   padding-top: 94px;
 }
 
+.advantages-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--button-background-color);
+}
+
+.advantages-symbol {
+  width: 70px;
+  height: 70px;
+}
+
 .advantages-list {
   display: flex;
   padding-bottom: 0;
   margin-top: -30px;
   margin-left: -30px;
+  flex-wrap: wrap;
 }
 
 .advantages-list-item {
-  flex-basis: 270px;
+  width: 270px;
+  flex-basis: calc((100% - 120px) / 4);
   margin-top: 30px;
   margin-left: 30px;
-}
-
-.advantages-list-item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  background-size: 70px 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--button-background-color);
-  margin-bottom: 30px;
-  border-radius: 4px;
 }
 
 .advantages-title {
@@ -312,7 +323,7 @@ body {
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: var(--icon-fill-color);
 }
 
 .social-media {
@@ -342,10 +353,60 @@ body {
 
 /* ================= END OUR TEAM ================= */
 
+/* ================= OUR CLIENTS ================= */
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.client-item {
+  flex-basis: calc((100% - 180px) / 6);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.client-company-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  color: var(--icon-fill-color);
+  border: 1px solid var(--icon-fill-color);
+  border-radius: 4px;
+}
+
+.client-company-link:hover,
+.client-company-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.company-logo {
+  fill: var(--icon-fill-color);
+  width: 106px;
+  height: 60px;
+}
+
+/* ================= END OUR CLIENTS ================= */
+
 /* ================= FOOTER ================= */
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address {
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -376,6 +437,51 @@ body {
 .footer-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
+
+.join-container {
+  display: block;
+}
+
+.join-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.join-social:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.join-social-link:hover,
+.join-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.join-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--secondary-text-color);
+}
+
+.join-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--secondary-text-color);
+}
+
 /* ================= END FOOTER ================= */
 
 /* ================= COMPONENTS ================= */
