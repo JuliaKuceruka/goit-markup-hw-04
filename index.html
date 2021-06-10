@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -57,7 +58,7 @@
         <section class="hero hero-background">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="modal-btn" type="button">Заказать услугу</button>
+                <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -122,16 +123,25 @@
                 <h2 class="subtitle">Чем мы занимаемся</h2>
                 <ul class="about-list list">
                     <li class="about-list-item">
-                        <img class="about-list-img" src="./images/about_us/about-img-1.jpg"
-                            alt="Веб-дизайн для ноутбуков" width="370" height="294">
+                        <div class="about-image-wrapper">
+                            <img class="about-list-img" src="./images/about_us/about-img-1.jpg"
+                                alt="Веб-дизайн для ноутбуков" width="370" height="294">
+                            <p class="about-img-description">Десктопные приложения</p>
+                        </div>
                     </li>
                     <li class="about-list-item">
-                        <img class="about-list-img" src="./images/about_us/about-img-2.jpg"
-                            alt="Веб-дизайн для смартфонов" width="370" height="294">
+                        <div class="about-image-wrapper">
+                            <img class="about-list-img" src="./images/about_us/about-img-2.jpg"
+                                alt="Веб-дизайн для смартфонов" width="370" height="294">
+                            <p class="about-img-description">Мобильные приложения</p>
+                        </div>
                     </li>
                     <li class="about-list-item">
-                        <img class="about-list-img" src="./images/about_us/about-img-3.jpg"
-                            alt="Веб-дизайн для планшетов" width="370" height="294">
+                        <div class="about-image-wrapper">
+                            <img class="about-list-img" src="./images/about_us/about-img-3.jpg"
+                                alt="Веб-дизайн для планшетов" width="370" height="294">
+                            <p class="about-img-description">Дизайнерские решения</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -422,9 +432,18 @@
                 </ul>
             </div>
         </div>
-
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="close-btn-icon" width="18" height="18">
+                    <use href="./images/sprite-two.svg#icon-close-black-18dp-2-1"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
